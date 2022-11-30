@@ -22,6 +22,10 @@ def space_short():
     print()
 space_short()
 
+def physik_clear():
+    for clear in range(100):
+        print()
+physik_clear()
 def Bwr():
         while True:
          clear()
@@ -225,13 +229,13 @@ def Bwr():
 Bwr()
 def Physik():
     while True:
-        clear()
+        physik_clear()
         spam()
         skip = input("Bitte Enter drücken wenn du nicht Bwr berechnen willst ('Bwr' wenn du Bwr Formeln brauchst) ")
         if skip == "":
             break
         elif skip == "Physik":
-            clear()
+            physik_clear()
             print("PHYSIK")
             space()
             formel = input("welche Formel brauchst du?")
@@ -309,19 +313,20 @@ def Physik():
                                     wait = input()
                                 else:
                                     print("Das Gewicht muss über 0 sein")
-                                    wait = input("")
+                                    wait = input()
                                     spam()
                         else:
                             print("Es gibt nur 'g' 'kg' 't' zum umrechnen")
                             wait = input()
                             spam()
                 elif formel == "Dichte":
-                    for clear in range(100):
-                        print("")
+                    physik_clear()
+                    print()
                     print("Alle Einheiten selber umrechnen")
+                    space()
                     while True:
                         volumen = input("Was ist das Volumen? (v) ")
-                        time.sleep(0.15)
+                        spam()
                         masse = input("was ist die masse? (m) ")
                         volumen = float(volumen)
                         masse = float(masse)
