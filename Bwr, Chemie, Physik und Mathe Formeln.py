@@ -5,7 +5,7 @@ def spam_long():
         time.sleep(1)
 
 def spam():
-    for i in range(1):
+    for spam in range(1):
         time.sleep(0.15)
 
 def space():
@@ -17,6 +17,10 @@ def clear():
     for clear in range(100):
         print()
 clear()
+
+def space_short():
+    print()
+space_short()
 
 def Bwr():
         while True:
@@ -140,8 +144,7 @@ def Bwr():
                                     clear()
                                     break       
             elif formel == "Verkaufskalkulation":
-                while True:
-                    while True:
+                       while True:
                         selbstkostenpreis = input("Was ist der Selbstkostenpreis? ")
                         spam()
                         gewinn = input("Was ist der Gewinn? ")
@@ -195,20 +198,172 @@ def Bwr():
                             if quitt == 'y':
                                 clear()
                                 break
-                                         
+            elif formel == "help":
+                clear()
+                space()
+                print("Prozentrechnung um Prozenteauszurechnen")
+                space()
+                print("Verkaufskalkulation um verkaufskalkulation auszurechnen")
+                space()
+                print("Einkaufskalkulation um Einkaufskalkulation auszurechnen")        
+                wait = input("")            
+            else:
+                clear()
+                space()
+                print("help für Hilfe")
+                wait = input("")
+         elif skip == "help":
+             clear()
+             print("Bwr für Bwr Formeln")
+             space()
+             print("Durch skippen um auswahl für alle Formeln zu haben ")
+             space()
+             print("Physik für Physik Formeln")
+             wait = input()   
+             clear()
+      
 Bwr()
-
-
-
+def Physik():
+    while True:
+        clear()
+        spam()
+        skip = input("Bitte Enter drücken wenn du nicht Bwr berechnen willst ('Bwr' wenn du Bwr Formeln brauchst) ")
+        if skip == "":
+            break
+        elif skip == "Physik":
+            clear()
+            print("PHYSIK")
+            space()
+            formel = input("welche Formel brauchst du?")
+            if formel == "Gewichtsumrechnung":
+                print("")
+                if formel == "Gewichtsumrechnung":
+                    spam()
+                    space()
+                    print()
+                    while True:
+                        print("von welcher einheit in welche einheit willst du Umrechnen? ")
+                        space()
+                        print()
+                        Einhheit_von = input("von welcher einheit? ")
+                        spam()
+                        Einheit_in = input ("in welcher Einheit? ")
+                        if Einhheit_von == "kg":
+                         if Einheit_in == "t":
+                            spam()
+                            Gewicht = input("Wie viel Kg? ")
+                            Gewicht = float(Gewicht)
+                            if Gewicht > 0:
+                                ergebnis = Gewicht / 1000
+                                print(f"Es sind {ergebnis} T")
+                                wait = input()
+                            else:
+                                print("Das Gewicht muss über 0 sein")
+                                spam()
+                         elif Einheit_in == "g":
+                            Gewicht = input("Wei viel Kg?")
+                            Gewicht = float(Gewicht)
+                            if Gewicht > 0:
+                                ergebnis = Gewicht * 1000
+                                print(f"Es sind {ergebnis} g ")
+                                wait = input()
+                            else:
+                                print("Das Gewicht muss über 0 sein")
+                                spam()
+                        elif Einhheit_von == "t":
+                         if Einheit_in == "kg":
+                             Gewicht = input("Wie vielt t? ")
+                             Gewicht = float(Gewicht)
+                             if Gewicht > 0:
+                                ergebnis =  1000 * Gewicht
+                                print(f"Es sind {ergebnis} kg")
+                                wait = input()
+                             else:
+                                 print("Das Gewicht muss über 0 sein")
+                                 time.sleep(0.15)
+                         elif Einheit_in == "g":         
+                            Gewicht = input("Wie vielt t? ")
+                            Gewicht = float(Gewicht)
+                            if Gewicht > 0:
+                                ergebnis =  100_000_0 * Gewicht
+                                print(f"Es sind {ergebnis} g")
+                                wait = input()
+                            else:
+                                print("Das Gewicht muss über 0 sein")
+                        elif Einhheit_von == "g":
+                            if Einheit_in == "kg":
+                             Gewicht = input("Wie viel g? ")
+                             Gewicht = float(Gewicht)
+                             if Gewicht > 0:
+                              ergebnis = Gewicht / 1000
+                              print(f"Es sind {ergebnis} kg")
+                              wait = input()
+                             else:
+                                 print("Das Gewicht muss über 0 sein")
+                            elif Einheit_in == "t":
+                                Gewicht = input("Wie viel g? ")
+                                Gewicht = float(Gewicht)
+                                if Gewicht > 0:
+                                    ergebnis = Gewicht / 100_000_0
+                                    print(f"Es sind {ergebnis} t")
+                                    wait = input()
+                                else:
+                                    print("Das Gewicht muss über 0 sein")
+                                    wait = input("")
+                                    spam()
+                        else:
+                            print("Es gibt nur 'g' 'kg' 't' zum umrechnen")
+                            wait = input()
+                            spam()
+                elif formel == "Dichte":
+                    for clear in range(100):
+                        print("")
+                    print("Alle Einheiten selber umrechnen")
+                    while True:
+                        volumen = input("Was ist das Volumen? (v) ")
+                        time.sleep(0.15)
+                        masse = input("was ist die masse? (m) ")
+                        volumen = float(volumen)
+                        masse = float(masse)
+                        if volumen > 0:
+                            if masse > 0:
+                                ergebnis = masse / volumen
+                                print(f"Die Dichte ist {ergebnis} p")
+                                quitt = input("Willst du aufhören Dichte zuberechnen? (y um zu bestätigen) ")
+                                if quitt == "y":
+                                    clear()
+                                    break
+                            else:
+                                print("Die Massee muss über 0 sein")
+                                spam()
+                        else:
+                            print("Das Volumen muss über 0 sein")
+                            spam()           
+                elif formel == "quit":
+                    clear()
+                    break
+                elif formel == "help":
+                    space_short()
+                    print("'Gewichtsumrechnung' für Gewichtsumrechnung")
+                    space_short()
+                    print("'Dichte'für Ausrechnung der Dichte")
+                    space_short()
+                    wait = input()
+                    clear()
+    Physik()
 def main():
-    space()
-    print ("WARNUNG WENN BUCHSTABEN IM ZAHLENFELD SIND KOMMT ES ZUM ABSTURTZ!")
-    space()
+    clear()
     while True:
         Fach = input("Aus welchen Fach brauchst du die Formel? ")
         if Fach == "Bwr":
          Bwr()
+        elif Fach == "Physik":
+         Physik()
+        elif Fach == "help":
+         clear()
+         print("Bwr eingben für zugang zu die Formeln in Bwr zubekommen")
+         space()
+         print("Physik eingeben für zugang zu die Formeln in Physik zubekommen")
+         space()
+         wait = input()
 main()
-
-
-
