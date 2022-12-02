@@ -1,5 +1,6 @@
 import time 
 
+
 def spam_long():
     for spam in range(1):
         time.sleep(1)
@@ -240,6 +241,7 @@ def Physik():
             space()
             formel = input("welche Formel brauchst du?")
             if formel == "Gewichtsumrechnung":
+              def Gewichtsumrechnung():
                 print("")
                 if formel == "Gewichtsumrechnung":
                     spam()
@@ -319,7 +321,9 @@ def Physik():
                             print("Es gibt nur 'g' 'kg' 't' zum umrechnen")
                             wait = input()
                             spam()
+                        Gewichtsumrechnung()
                 elif formel == "Dichte":
+                 def Dichte():
                     physik_clear()
                     print()
                     print("Alle Einheiten selber umrechnen")
@@ -343,7 +347,8 @@ def Physik():
                                 spam()
                         else:
                             print("Das Volumen muss über 0 sein")
-                            spam()           
+                            spam()    
+                        Dichte()
                 elif formel == "quit":
                     clear()
                     break
@@ -353,8 +358,66 @@ def Physik():
                     space_short()
                     print("'Dichte'für Ausrechnung der Dichte")
                     space_short()
+                    print("'Whub' um Whub zu berechnen")
+                    space_short()
                     wait = input()
                     clear()
+                elif formel == "Whub":
+                 def Whub():
+                    abfrage_einheit = input("Hast du Fg? ('ja' wenn du es hast |'nein' wenn nicht) ")
+                    if abfrage_einheit == "ja":
+                        Fg = input("Was ist Fg? (Fg = Gewichtskraft)  ")
+                        spam()
+                        h = input("Was ist h? (h = Höhe ")
+                        Fg = float(Fg)
+                        h = float(h)
+                        if Fg > 0:
+                            if h > 0:
+                                Whub = Fg * h 
+                                Whub = float(Whub)
+                                spam()
+                                print(f"Whub ist {Whub}")
+                                spam()
+                                return Whub
+                            else:
+                                print("h muss muss über 0 sein ")
+                        else:
+                            print("Fg muss muss über 0 sein ")
+                        quitt = input("Willst du Aufhören Whub zu berechnen? (y um zu bestätigen ")
+                        if quitt == "y":
+                            clear()
+                            break
+                    elif abfrage_einheit == "nein":
+                        m = input("Was ist m? (m = Masse) ")
+                        spam()
+                        g = input("Was ist g? (g = Ortsfaktor) ")
+                        spam()
+                        h = input("Was ist h? (h = Höhe) ")
+                        spam()
+                        m = float(m)
+                        g = float(g)
+                        h = float(h)
+                        if m > 0:
+                            if g > 0:
+                                if h > 0:
+                                 Whub = m * g * h 
+                                 Whub = float(Whub)
+                                 spam()
+                                 print(f"Whub ist {Whub}")
+                                 spam()
+                                 return Whub
+                                else:
+                                    print("h muss muss über 0 sein ")
+                            else:
+                                print("g muss muss über 0 sein ")
+                        else: 
+                            print("g muss muss über 0 sein")
+                        quitt = input("Willst du Aufhören Whub zu berechnen? (y um zu bestätigen")
+                        if quitt == "y":
+                            clear()
+                            break
+                Whub()                            
+                                    
     Physik()
 def main():
     clear()
